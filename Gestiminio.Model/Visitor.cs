@@ -18,8 +18,8 @@ namespace Gestiminio.Model
         public string DocumentTypeName { get; set; }
         public string DocumentNumber { get; set; }
         public string VisitorEmail { get; set; }
-        public string OwnerDni { get; set; }
-        public string OwnerName { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; }
 
     }
 }

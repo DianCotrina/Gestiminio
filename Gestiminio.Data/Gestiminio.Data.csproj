@@ -59,6 +59,7 @@
     <Compile Include="CommonAreaData.cs" />
     <Compile Include="EventData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptData.cs" />
     <Compile Include="ReservationData.cs" />
     <Compile Include="RoleData.cs" />
     <Compile Include="StatusData.cs" />

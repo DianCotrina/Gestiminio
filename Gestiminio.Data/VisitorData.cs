@@ -62,14 +62,14 @@ namespace Gestiminio.Data
                     visitor.EventId = int.Parse(reader[""].ToString());
                     visitor.EventName = reader[""].ToString();
                     visitor.EventDate = Convert.ToDateTime(reader[""].ToString());
-                    visitor.VisitorName = reader[""].ToString();
-                    visitor.VisitorLastName = reader[""].ToString();
+                    visitor.VisitorName = reader["nombre"].ToString();
+                    visitor.VisitorLastName = reader["apellido"].ToString();
                     visitor.DocumentTypeId = int.Parse(reader[""].ToString());
                     visitor.DocumentTypeName = reader[""].ToString();
-                    visitor.DocumentNumber = reader[""].ToString();
-                    visitor.VisitorEmail = reader[""].ToString();
-                    visitor.OwnerDni = reader[""].ToString();
-                    visitor.OwnerName = reader[""].ToString();
+                    visitor.DocumentNumber = reader["Dni"].ToString();
+                    visitor.VisitorEmail = reader["email"].ToString();
+                    visitor.UserId = int.Parse(reader[""].ToString());
+                    visitor.UserName = reader[""].ToString();
                     list.Add(visitor);
                 }
             }

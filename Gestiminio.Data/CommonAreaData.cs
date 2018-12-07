@@ -50,13 +50,6 @@ namespace Gestiminio.Data
                     commonArea.commonAreaName = reader["nombreAreaComun"].ToString();
                     commonArea.commonAreaDescription = reader["descripcionAreaComun"].ToString();
                     commonArea.commonAreaReservationLimits = int.Parse(reader["LimiteReservaAreaComun"].ToString());
-                    commonArea.commonAreaMonday = int.Parse(reader["lunes"].ToString());
-                    commonArea.commonAreaTuesday = int.Parse(reader["martes"].ToString());
-                    commonArea.commonAreaWednesday = int.Parse(reader["miercoles"].ToString());
-                    commonArea.commonAreaThursday = int.Parse(reader["jueves"].ToString());
-                    commonArea.commonAreaFriday = int.Parse(reader["viernes"].ToString());
-                    commonArea.commonAreaSaturday = int.Parse(reader["sabado"].ToString());
-                    commonArea.commonAreaSunday = int.Parse(reader["domingo"].ToString());
                     //se agrega a la lista workersList
                     commonAreaList.Add(commonArea);
                 }
@@ -87,6 +80,7 @@ namespace Gestiminio.Data
                     commonArea.commonAreaId = reader["codigoAreaComun"].ToString();
                     commonArea.commonAreaName = reader["nombreAreaComun"].ToString();
                     commonArea.commonAreaDescription = reader["descripcionAreaComun"].ToString();
+                    commonArea.commonAreaStatusId = int.Parse(reader[""].ToString());
 
                     list.Add(commonArea);
                 }
@@ -107,13 +101,6 @@ namespace Gestiminio.Data
             cmd.Parameters.AddWithValue("@commonAreaName", area.commonAreaName);
             cmd.Parameters.AddWithValue("@commonAreaDescription", area.commonAreaDescription);
             cmd.Parameters.AddWithValue("@commonAreaReservationLimits", area.commonAreaReservationLimits);
-            cmd.Parameters.AddWithValue("@commonAreaMonday", area.commonAreaMonday);
-            cmd.Parameters.AddWithValue("@commonAreaTuesday", area.commonAreaTuesday);
-            cmd.Parameters.AddWithValue("@commonAreaWednesday", area.commonAreaWednesday);
-            cmd.Parameters.AddWithValue("@commonAreaThursday", area.commonAreaThursday);
-            cmd.Parameters.AddWithValue("@commonAreaFriday", area.commonAreaFriday);
-            cmd.Parameters.AddWithValue("@commonAreaSaturday", area.commonAreaSaturday);
-            cmd.Parameters.AddWithValue("@commonAreaSunday", area.commonAreaSunday);
             cmd.ExecuteNonQuery();
 
             connection.Close();
@@ -131,13 +118,6 @@ namespace Gestiminio.Data
             cmd.Parameters.AddWithValue("@commonAreaName", area.commonAreaName);
             cmd.Parameters.AddWithValue("@commonAreaDescription", area.commonAreaDescription);
             cmd.Parameters.AddWithValue("@commonAreaReservationLimits", area.commonAreaReservationLimits);
-            cmd.Parameters.AddWithValue("@commonAreaMonday", area.commonAreaMonday);
-            cmd.Parameters.AddWithValue("@commonAreaTuesday", area.commonAreaTuesday);
-            cmd.Parameters.AddWithValue("@commonAreaWednesday", area.commonAreaWednesday);
-            cmd.Parameters.AddWithValue("@commonAreaThursday", area.commonAreaThursday);
-            cmd.Parameters.AddWithValue("@commonAreaFriday", area.commonAreaFriday);
-            cmd.Parameters.AddWithValue("@commonAreaSaturday", area.commonAreaSaturday);
-            cmd.Parameters.AddWithValue("@commonAreaSunday", area.commonAreaSunday);
             cmd.ExecuteNonQuery();
 
 
