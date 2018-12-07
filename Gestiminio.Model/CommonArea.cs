@@ -14,6 +14,8 @@ namespace Gestiminio.Model
         public int commonAreaReservationLimits { get; set; }
         public int commonAreaStatusId { get; set; }
         public string commonAreaStatusDes { get; set; }
+        public int commonAreaDayId { get; set; }
+        public string commonAreaDayDes { get; set; }
 
         public void Validar()
         {
