@@ -9,8 +9,7 @@ namespace Gestiminio.Model
     public class Apartment
     {
         public int ApartmentId { get; set; }
-        public string ApartmentName { get; set; }
-        public string OwnerDni { get; set; }
-        public string OwnerName { get; set; }
+        public string ApartmentNumber { get; set; }
+
     }
 }

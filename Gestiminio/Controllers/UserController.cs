@@ -37,10 +37,10 @@ namespace Gestiminio.Controllers
         }
 
         [HttpGet]
-        public User getUserById(int id)
+        public User getUserById(int userId)
         {
             var list = userBusiness.getUsersList();
-            User user = list.FirstOrDefault(x => x.userId == id);
+            User user = list.FirstOrDefault(x => x.userId == userId);
             return user;
         }
 

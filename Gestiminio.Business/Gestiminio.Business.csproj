@@ -59,6 +59,7 @@
     <Compile Include="CommonAreaBusiness.cs" />
     <Compile Include="EventBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptBusiness.cs" />
     <Compile Include="ReservationBusiness.cs" />
     <Compile Include="RoleBusiness.cs" />
     <Compile Include="StatusBusiness.cs" />

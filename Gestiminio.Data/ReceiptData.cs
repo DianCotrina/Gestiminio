@@ -17,10 +17,16 @@ namespace Gestiminio.Data
             connection = new SqlConnection(connectionString);
         }
 
-        public void addReceipt()
+        /*public void addReceipt()
         {
+            connection.Open();
 
+            string sqlStatement = "sp_addReceipt";
+            SqlCommand cmd = new SqlCommand(sqlStatement, connection);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@");
         }
-
+        */
     }
 }
