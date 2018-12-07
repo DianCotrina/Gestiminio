@@ -23,14 +23,16 @@ namespace Gestiminio.Data
         public List<Worker> getWorkersList()
         {
             List<Worker> workersList = null;
+            connection.Open();
             //crear Sqlstatement y poner el nombre del SP
             var sqlStatement = "sp_getWorkersList";
             //crear command y asignarle los parametros del statement más la conexion
             SqlCommand cmd = new SqlCommand(sqlStatement, connection);
-            //crear el reader y ejecutar el command
-            connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //crear el reader y ejecutar el command
+
+            SqlDataReader reader = cmd.ExecuteReader();
+           
 
             //abrir la conexion
             

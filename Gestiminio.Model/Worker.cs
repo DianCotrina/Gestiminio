@@ -16,6 +16,7 @@ namespace Gestiminio.Model
         public int workerRoleId { get; set; }
         public string workerRoleDescription { get; set; }
         public DateTime workerStartDate { get; set; }
+        public DateTime workerFinishDate { get; set; }
         public int workerStatusId { get; set; }
         public string workerStatusDescription { get; set; }
 

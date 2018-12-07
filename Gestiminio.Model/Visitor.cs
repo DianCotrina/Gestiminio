@@ -20,6 +20,8 @@ namespace Gestiminio.Model
         public string VisitorEmail { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
+        public int ApartmentId { get; set; }
+        public string ApartmentName { get; set; }
 
     }
 }
