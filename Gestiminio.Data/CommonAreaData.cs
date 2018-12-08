@@ -49,7 +49,10 @@ namespace Gestiminio.Data
                     commonArea.commonAreaId = reader["codigoAreaComun"].ToString();
                     commonArea.commonAreaName = reader["nombreAreaComun"].ToString();
                     commonArea.commonAreaDescription = reader["descripcionAreaComun"].ToString();
-                    commonArea.commonAreaReservationLimits = int.Parse(reader["LimiteReservaAreaComun"].ToString());
+                    commonArea.commonAreaStatusId = int.Parse(reader["codigoEstado"].ToString());
+                    commonArea.commonAreaStatusDes = reader["descripcionEstado"].ToString();
+                    commonArea.commonAreaDayId = int.Parse(reader["codDia"].ToString());
+                    commonArea.commonAreaDayDes = reader["desDia"].ToString();
                     //se agrega a la lista workersList
                     commonAreaList.Add(commonArea);
                 }
@@ -100,7 +103,8 @@ namespace Gestiminio.Data
             cmd.Parameters.AddWithValue("@commonAreaId", area.commonAreaId);
             cmd.Parameters.AddWithValue("@commonAreaName", area.commonAreaName);
             cmd.Parameters.AddWithValue("@commonAreaDescription", area.commonAreaDescription);
-            cmd.Parameters.AddWithValue("@commonAreaReservationLimits", area.commonAreaReservationLimits);
+            cmd.Parameters.AddWithValue("@commonAreaStatusId", area.commonAreaStatusId);
+            cmd.Parameters.AddWithValue("@commonAreaDayId", area.commonAreaDayId);
             cmd.ExecuteNonQuery();
 
             connection.Close();
@@ -117,7 +121,8 @@ namespace Gestiminio.Data
             cmd.Parameters.AddWithValue("@commonAreaId", area.commonAreaId);
             cmd.Parameters.AddWithValue("@commonAreaName", area.commonAreaName);
             cmd.Parameters.AddWithValue("@commonAreaDescription", area.commonAreaDescription);
-            cmd.Parameters.AddWithValue("@commonAreaReservationLimits", area.commonAreaReservationLimits);
+            cmd.Parameters.AddWithValue("@commonAreaStatusId", area.commonAreaStatusId);
+            cmd.Parameters.AddWithValue("@commonAreaDayId", area.commonAreaDayId);
             cmd.ExecuteNonQuery();
 
 

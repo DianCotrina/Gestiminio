@@ -31,7 +31,7 @@ namespace Gestiminio.Controllers
         }
 
         [HttpPost]
-        public string createWorker(CommonArea area)
+        public string createCommonArea(CommonArea area)
         {
             string msg = "";
             msg = commonAreaBusiness.addCommonArea(area);
@@ -39,7 +39,7 @@ namespace Gestiminio.Controllers
         }
 
         [HttpPost]
-        public string updateWorker(CommonArea area)
+        public string updateCommonArea(CommonArea area)
         {
             string msg = "";
             msg = commonAreaBusiness.updateCommonArea(area);
@@ -47,7 +47,7 @@ namespace Gestiminio.Controllers
         }
 
         [HttpPost]
-        public string deleteWorker(string param)
+        public string deleteCommonArea(string param)
         {
             string msg = "";
             msg = commonAreaBusiness.deleteCommonArea(param);
