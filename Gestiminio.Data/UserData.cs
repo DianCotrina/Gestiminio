@@ -60,8 +60,6 @@ namespace Gestiminio.Data
                     user.userStartDate = Convert.ToDateTime(reader["fechaIngreso"]);
                     user.userStatusId = int.Parse(reader["codigoEstado"].ToString());
                     user.userStatusDescription = reader["descripcionEstado"].ToString();
-                    user.ApartmentId = int.Parse(reader["codigoDepartamento"].ToString());
-                    user.AparmentNumber = reader["nroDepartamento"].ToString();
                     //se agrega a la lista workersList
                     usersList.Add(user);
                 }

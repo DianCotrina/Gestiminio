@@ -21,8 +21,6 @@ namespace Gestiminio.Model
         public DateTime userStartDate { get; set; }
         public int userStatusId { get; set; }
         public string userStatusDescription { get; set; }
-        public int ApartmentId { get; set; }
-        public string AparmentNumber { get; set; }
 
         public void Validar()
         {
