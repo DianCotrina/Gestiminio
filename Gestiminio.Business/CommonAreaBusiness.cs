@@ -24,11 +24,11 @@ namespace Gestiminio.Business
             {
                 area.Validar();
                 data.addCommonArea(area);
-                msg = "Trabajador registrado con éxito";
+                msg = "Area comun registrada con éxito";
             }
             catch (Exception ex)
             {
-                msg = "Error al registrar trabajador" + ex.Message;
+                msg = "Error al registrar area comun" + ex.Message;
             }
             return msg;
         }
@@ -40,7 +40,7 @@ namespace Gestiminio.Business
             {
                 if (area.commonAreaId.Equals(""))
                 {
-                    msg = "¡Usuario no válido!";
+                    msg = "Id de area comun no valido";
                 }
                 else
                 {
@@ -49,17 +49,17 @@ namespace Gestiminio.Business
                     {
                         area.Validar();
                         data.updateCommonArea(area);
-                        msg = "Usuario actualizado con éxito";
+                        msg = "Area comun actualizada con éxito";
                     }
                     else
                     {
-                        msg = "¡Usuario no existe!";
+                        msg = "¡Area comun no existe!";
                     }
                 }
             }
             catch (Exception ex)
             {
-                msg = "Error al actualizar trabajador" + ex.Message;
+                msg = "Error al actualizar area comun" + ex.Message;
             }
             return msg;
         }
@@ -76,7 +76,7 @@ namespace Gestiminio.Business
             {
                 if (commonAreaId.Equals(""))
                 {
-                    msg = "¡Usuario no válido!";
+                    msg = "Id de area comun no valido";
                 }
                 else
                 {
@@ -84,17 +84,17 @@ namespace Gestiminio.Business
                     if (existeArea)
                     {
                         data.deleteCommonArea(commonAreaId);
-                        msg = "Usuario actualizado con éxito";
+                        msg = "Area comun actualizada con éxito";
                     }
                     else
                     {
-                        msg = "¡Usuario no existe!";
+                        msg = "¡Area comun no existe!";
                     }
                 }
             }
             catch (Exception ex)
             {
-                msg = "Error al eliminar trabajador" + ex.Message;
+                msg = "Error al eliminar area comun" + ex.Message;
             }
             return msg;
         }

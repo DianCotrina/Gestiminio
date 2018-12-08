@@ -24,16 +24,18 @@ namespace Gestiminio.Data
         public List<CommonArea> getCommonAreaList()
         {
             List<CommonArea> commonAreaList = null;
+            connection.Open();
             //crear Sqlstatement y poner el nombre del SP
             var sqlStatement = "sp_getCommonAreaList";
             //crear command y asignarle los parametros del statement más la conexion
             SqlCommand cmd = new SqlCommand(sqlStatement, connection);
-            //crear el reader y ejecutar el command
-            SqlDataReader reader = cmd.ExecuteReader();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+            //crear el reader y ejecutar el command
+            SqlDataReader reader = cmd.ExecuteReader();
+
             //abrir la conexion
-            connection.Open();
+            
             //verificar que tenga filas para leer con un if statement
             if (reader.HasRows)
             {
